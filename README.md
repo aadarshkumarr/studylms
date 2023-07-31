@@ -18,7 +18,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://studylms.vercel.app/](https://studylms.vercel.app/) to view it in your browser.
 
 This project is for providing different companies their tallored versions of their policies knowlwdge to their employees.
 ---
