@@ -1,0 +1,65 @@
+/* ---------------------------------------------------------
+	 Site color custom theme/scheme includes
+	 ---------------------------------------------------------*/
+.bg-theme,
+.btn-theme,
+.user-links,
+.features-aside .col,
+.counter-aside .countdown::after,
+.block-header:after,
+.seperator-head:before,
+.news-post:hover:after,
+.newsletter-sub-form .icn.bg-theme,
+.widget > h3:after,
+.widget > .h3:after,
+.listDefault > li:before,
+.sep-heading:after,
+.contact-form h3:after,
+.contact-form .h3:after,
+.price-list:before,
+.price-list:hover .icn-wrap,
+.partner-block .partner-list li a:before,
+.price-box-column:hover .icn-wrap,
+.price-box-column.active .icn-wrap,
+.price-box-column:before {
+	background-color: #ffc000;
+}
+
+.upcoming-events-list .date,
+.testimonial-quote h5.text-yellow,
+.testimonial-quote .h5.text-yellow,
+.news-post .time a:hover,
+.ft-address dt,
+.profiler-wrap .icn-wrap,
+.view-header .icn-wrap,
+.sectionRowPanelGroup .inlineIcn,
+.sectionRowPanelGroup.panel-group .inlineIcn,
+.ticketsInfoList .title,
+.pro-column h4,
+.pro-column .h4,
+.user-log-form p a,
+.forum-data-table p > a:not(.btn),
+.forum-data-table.table p > a:not(.btn),
+.no-page-block .text-bright,
+.learning-cources-list .icn,
+.descr-column .icn,
+.intro-aside h2 .clr,
+.become-aside-block .text-bright,
+.ticketsInfoAside
+	.comming-timer
+	.countdown-row
+	.countdown-section
+	.countdown-amount {
+	color: #ffc000;
+}
+
+.categories-list > li.active > a,
+.categories-list > li > a:hover,
+.widget_intro .btn-play:hover,
+.topics-data-table thead tr,
+.forum-data-table thead tr,
+.topics-data-table.table thead tr,
+.table.forum-data-table thead tr,
+.logo-wrap > a:hover:after {
+	border-color: #ffc000;
+}
