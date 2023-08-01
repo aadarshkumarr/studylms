@@ -8,8 +8,8 @@ const handleSubmit = async (event) => {
 	const from_name = document.getElementById("name").value;
 	const email_id = document.getElementById("email").value;
 	const mobile_no = document.getElementById("mobile").value;
+	const countryCode = document.getElementById("countryCode").value;
 	const employee_id = document.getElementById("employeeId").value;
-	const message = document.getElementById("message").value;
 
 	// Gather the form data
 	const formData = {
@@ -17,13 +17,13 @@ const handleSubmit = async (event) => {
 		email: email_id,
 		mobile: mobile_no,
 		employeeId: employee_id,
-		message: message,
+		countryCode: countryCode,
 	};
 
 	const emailAddresses = [
-		"viratkashyap903@gmail.com",
-		"ivikaskashyap01@gmail.com",
-		"id.vikaskashyap@gmail.com",
+		"vikas.kashyap@nuk9.in",
+		"aadarsh.kumar@nuk9.in",
+		// "deepesh@nuk9.in",
 	];
 
 	const emailTemplateParams = {
@@ -32,7 +32,7 @@ const handleSubmit = async (event) => {
 		to_email: email_id,
 		mobile: mobile_no,
 		employeeId: employee_id,
-		message: message,
+		countryCode: countryCode,
 	};
 
 	// Send the email using EmailJS
@@ -54,7 +54,7 @@ const handleSubmit = async (event) => {
 
 	// Save data to Google Sheets using fetch
 	await fetch(
-		"https://v1.nocodeapi.com/vikaskashyap/google_sheets/hrvlRHIxsEZANjVl?tabId=Sheet1",
+		"https://v1.nocodeapi.com/vikaskashyap/google_sheets/hrvlRHIxsEZANjVl?tabId=UserData",
 		{
 			method: "POST",
 			headers: {
@@ -72,7 +72,7 @@ const handleSubmit = async (event) => {
 				email_id.value = "";
 				mobile_no.value = "";
 				employee_id.value = "";
-				message.value = "";
+				countryCode.value = "";
 			});
 		})
 		.catch((error) => {
@@ -82,3 +82,24 @@ const handleSubmit = async (event) => {
 
 // Add the event listener to the form
 contactForm.addEventListener("submit", handleSubmit);
+
+// tnc
+const agreeCheckbox = document.getElementById("agreeCheckbox");
+const submitButton = document.getElementById("submitButton");
+
+agreeCheckbox.addEventListener("change", function () {
+	submitButton.disabled = !this.checked;
+});
+
+// number input
+const mobileInput = document.getElementById("mobile");
+
+mobileInput.addEventListener("input", function () {
+	// Remove any non-numeric characters from the input
+	this.value = this.value.replace(/\D/g, "");
+
+	// Limit the input to 10 digits
+	if (this.value.length > 10) {
+		this.value = this.value.slice(0, 10);
+	}
+});
